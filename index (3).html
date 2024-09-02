@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sacris Library</title>
+<style>
+    /* CSS styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff; /* Alice blue */
+    }
+
+    h2 {
+        background-color: rgba(255, 255, 255, 0.7); /* Dreamy background */
+        padding: 10px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .section {
+        background-color: rgba(245, 222, 179, 0.5); /* Watermark-colored background */
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+    }
+
+    button {
+        background-color: #0074d9; /* Blue color */
+        color: #fff;
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    li {
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    footer {
+        background-color: #f0f8ff; /* Alice blue */
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .social-icon {
+        margin: 0 5px;
+        color: #333;
+        text-decoration: none;
+    }
+
+    @keyframes moveText {
+        0%, 100% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(10px);
+        }
+    }
+
+    .moving-text {
+        animation: moveText 2s infinite;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <h2>Sacris Spiritual Books</h2>
+    <div class="section">
+        <button onclick="toggleList('listA')">A</button>
+        <ul id="listA" class="hidden">
+            <li onclick="showTitle('Andrew Wommack')">Andrew Wommack</li>
+            <li onclick="showTitle('Apostle Johnson Suleman')">Apostle Johnson Suleman</li>
+            <!-- Add more preacher names for letter A -->
+        </ul>
+        <!-- Add more buttons and lists for other alphabets -->
+    </div>
+
+    <h2>Sacris Development Audios</h2>
+    <div class="section">
+        <button onclick="toggleList('listB')">B</button>
+        <ul id="listB" class="hidden">
+            <li onclick="showTitle('Benny Hinn')">Benny Hinn</li>
+            <li onclick="showTitle('Bishop David Oyedepo')">Bishop David Oyedepo</li>
+            <!-- Add more preacher names for letter B -->
+        </ul>
+        <!-- Add more buttons and lists for other alphabets -->
+    </div>
+
+    <h2>Sacris Building Books</h2>
+    <div class="section">
+        <button onclick="toggleList('listC')">C</button>
+        <ul id="listC" class="hidden">
+            <li onclick="showTitle('Chris Oyakhilome')">Chris Oyakhilome</li>
+            <li onclick="showTitle('Creflo Dollar')">Creflo Dollar</li>
+            <!-- Add more preacher names for letter C -->
+        </ul>
+        <!-- Add more buttons and lists for other alphabets -->
+    </div>
+
+    <footer>
+        <p class="moving-text">Develop yourself for a bright and glorious future</p>
+        <a href="#" class="social-icon">Facebook</a>
+        <a href="#" class="social-icon">Twitter</a>
+        <a href="#" class="social-icon">Instagram</a>
+    </footer>
+
+    <script>
+        // JavaScript code
+        function toggleList(listId) {
+            const list = document.getElementById(listId);
+            list.classList.toggle('hidden');
+        }
+
+        function showTitle(title) {
+            alert('Title: ' + title);
+        }
+    </script>
+</body>
+</html>
